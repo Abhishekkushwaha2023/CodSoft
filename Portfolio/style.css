@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #1f242d;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 25px 9%;
+  background: rgb(33, 110, 161);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-box .logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li {
+  list-style: none;
+  margin-left: 35px;
+  transition: 0.5s;
+}
+.navbar ul li:hover a,
+.navbar ul li.active a {
+  color: rgb(17, 225, 31);
+}
+
+.home {
+  display: flex;
+  text-align: justify;
+  align-items: center;
+  height: 100vh;
+  padding: 60px 9% 0;
+  color: #fff;
+}
+.home-info h1 {
+  font-size: 50px;
+  color: chartreuse;
+}
+.home-info h2 {
+  font-size: 30px;
+  margin-top: -10px;
+}
+.home-info p {
+  font-size: 15px;
+  margin: 10px 0 25px;
+}
+.home-info .btn-sci {
+  display: flex;
+  align-items: center;
+  margin-top: -20px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 20px 0;
+  margin-right: 20px;
+  background: whitesmoke;
+  color: blue;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.btn:hover {
+  background-color: blue;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: #527ecf;
+  box-shadow: 0 0 10px;
+}
+.home-info .btn-sci .sci a {
+  display: inline-flex;
+  padding: 8px;
+  border: 2px solid blue;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #1f242d;
+  background-color: white;
+  size: 50px;
+}
+.home-info .btn-sci .sci a :hover {
+  transform: translateY(-5px);
+  box-shadow: #5f8fe8;
+  box-shadow: 0 0 10px;
+}
