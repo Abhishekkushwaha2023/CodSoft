@@ -5,6 +5,17 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
 body {
   background: #1f242d;
 }
@@ -17,8 +28,9 @@ a {
   left: 0;
   top: 0;
   width: 100%;
+  height: 110px;
   padding: 25px 9%;
-  background: rgb(33, 110, 161);
+  background: #578ef5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,6 +47,23 @@ a {
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
+  display: inline-block;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px); /* Move up */
+  }
+  100% {
+    transform: translateY(0px); /* Back to original */
+  }
+}
+
+.logo-box img:hover {
+  animation-play-state: paused;
 }
 
 .logo-box .logo {
@@ -55,8 +84,7 @@ a {
   margin-left: 35px;
   transition: 0.5s;
 }
-.navbar ul li:hover a,
-.navbar ul li.active a {
+.navbar ul li:hover a {
   color: rgb(17, 225, 31);
 }
 
@@ -66,6 +94,8 @@ a {
   align-items: center;
   height: 100vh;
   padding: 60px 9% 0;
+
+  margin-bottom: 100px;
   color: #fff;
 }
 .home-info h1 {
@@ -75,6 +105,40 @@ a {
 .home-info h2 {
   font-size: 30px;
   margin-top: -10px;
+}
+.home-info h2 span {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 0.7px chartreuse;
+  animation: display-text 12s linear infinite;
+  animation-delay: calc(-4s * var(--i));
+}
+@keyframes display-text {
+  25%,
+  100% {
+    display: none;
+  }
+}
+.home-info h2 span::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 0;
+  border-right: 2px solid chartreuse;
+  color: chartreuse;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fill-text 4s linear infinite;
+}
+@keyframes fill-text {
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
 }
 .home-info p {
   font-size: 15px;
@@ -109,11 +173,140 @@ a {
   border-radius: 50%;
   font-size: 20px;
   color: #1f242d;
-  background-color: white;
-  size: 50px;
+  background: white;
+  margin: 0 8px;
+  transition: 0.5s;
 }
-.home-info .btn-sci .sci a :hover {
+.home-info .btn-sci .sci a:hover {
+  background: white;
+  color: blue;
+  box-shadow: 0 0 10px blue;
   transform: translateY(-5px);
-  box-shadow: #5f8fe8;
-  box-shadow: 0 0 10px;
+}
+.about {
+  padding-top: 110px;
+  height: 600px;
+}
+.about-text h2 {
+  text-align: center;
+  font-size: 70px;
+  color: chartreuse;
+}
+.about .about-text p {
+  color: aliceblue;
+  font-size: 15px;
+  margin: 10px 0 25px;
+  padding: 60px 9% 0;
+  text-align: justify;
+}
+.projects {
+  padding-top: 110px;
+}
+.projects .box {
+  display: flex;
+
+  margin: auto;
+  align-items: center;
+}
+.projects h1 {
+  text-align: center;
+  font-size: 70px;
+  color: chartreuse;
+  padding-bottom: 10px;
+}
+.projects a img {
+  margin: 10px 0 25px;
+  padding: 60px 9% 0;
+  width: 500px;
+  height: 300px;
+}
+.about-project {
+  color: white;
+  margin-top: 50px;
+}
+.contact {
+  padding-top: 110px;
+  height: 1000px;
+  color: white;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 70px;
+  color: chartreuse;
+}
+.contact-box {
+  margin: 10px 0 25px;
+  padding: 60px 9% 0;
+  letter-spacing: 0.2cap;
+}
+.contact h4 {
+  margin: 10px;
+  color: white;
+  font-size: 40px;
+}
+.contact li {
+  margin: 10px;
+}
+.contact p {
+  margin: 10px;
+  padding-bottom: 10px;
+}
+
+.contact h2 {
+  font-size: 40px;
+  margin: 10px;
+}
+.contact-form label {
+  padding: 10px;
+  margin: 50px 0;
+  width: 500px;
+}
+.contact-form form {
+  position: relative;
+}
+.contact-form label input {
+  border: none;
+  outline: none;
+  width: 500px;
+  padding: 5px;
+  background: white;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+.contact-form label textarea {
+  resize: none;
+  height: 220px;
+  width: 100%;
+  padding: 18px;
+  background: white;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+.contact-form button {
+  font-size: 20px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+h6 {
+  font-size: 20px;
+}
+.footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+.footer p {
+  margin: 0;
 }
