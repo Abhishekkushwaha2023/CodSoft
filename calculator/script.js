@@ -13,6 +13,9 @@ arr.forEach((button) => {
     } else if (e.target.innerHTML == "DEL") {
       string = string.substring(0, string.length - 1);
       input.value = string;
+    } else if (e.target.innerHTML == "%") {
+      string = string + "/100";
+      input.value = string;
     } else if (e.target.innerHTML == "()") {
       let open = (string.match(/\(/g) || []).length;
       let close = (string.match(/\)/g) || []).length;
