@@ -1,12 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessFreaks</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-  </body>
+    <link rel="stylesheet" href="utils.css">
+</head>
+
+<body class='overflow-x-hidden'>
+    <div class="container mx-auto">
+        <header>
+            <nav class="flex justify-between">
+                <div class="logo font-bold flex items-center text-blue">FitnessFreaks</div>
+                <ul class="navbar flex items-center">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact Us</li>
+                    <li><button class="btn">Join Now</button></li>
+                </ul>
+            </nav>
+            <hr>
+        </header>
+        <main class="min-h-screen">
+            <section class="section1">
+                <div class="flex">
+                    <div class="topleft flex flex-col justify-center px-2">
+                        <div class=" text-center">
+                            <img class="dumbellimg" src="dumbell.png" alt="">
+                        </div>
+                        <h1 class="my-1 text-center">The best fitness Gym in the town is here</h1>
+                        <p class=" text-center">At Fitness Freaks, we’re not just a gym — we’re a community built around dedication, energy, and growth. Whether you're lifting for strength, training for endurance, or just starting your fitness journey, we’ve got the space, support, and spirit to help you succeed. With expert trainers, top-tier equipment, and a vibe that keeps you coming back, this is where you become your best self.
+
+
+                            <p class="deal text-center">The deal ends in <span id="demo"></span></p>
+                            <div class="buttons">
+                                <button class="btn">Join now</button>
+                                <button class="btn">Contact Us</button>
+                            </div>
+                    </div>
+                    <div class="topright flex justify-center">
+                        <img class="gymimg" src="gym.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section class="section2">
+                <h1 class="text-center my-2">Pricing</h1>
+                <p class="my-2">At Fitness Freaks, we offer flexible and affordable membership plans to suit every fitness journey. Whether you’re just starting out or looking to take your training to the next level, we have a plan for you. Our Basic Plan is perfect for those who want access to top-quality gym equipment at an unbeatable price. For those seeking guidance and extra motivation, our Standard Plan includes personal training sessions, group classes, and nutrition advice. And for the truly dedicated, our Pro Plan offers unlimited personal training, 24/7 access, and a fully customized workout and diet plan. No matter your goal, you’ll find value, support, and results at Fitness Freaks.</p>
+                <div class="boxes flex justify-center">
+                    <div class="box">
+                        <h2>Free</h2>
+                        <ul>
+                            <li class="highlighted">₹0/month</li>
+                            <li>0 users included</li>
+                            <li>2 GB of storage</li>
+                            <li>Email support</li>
+                            <li>Help center access</li>
+                            <li><button class="btn">Signup Now</button></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h2>Pro</h2>
+                        <ul>
+                            <li class="highlighted">₹150/month</li>
+                            <li>0 users included</li>
+                            <li>2 GB of storage</li>
+                            <li>Email support</li>
+                            <li>Help center access</li>
+                            <li><button class="btn">Signup Now</button></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h2>Enterprise</h2>
+                        <ul>
+                            <li class="highlighted">₹500/month</li>
+                            <li>0 users included</li>
+                            <li>2 GB of storage</li>
+                            <li>Email support</li>
+                            <li>Help center access</li>
+                            <li><button class="btn">Signup Now</button></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+            <hr>
+            <section class="section3">
+                <h1 class="text-center my-2">Compare Plans</h1>
+                <div class="container plantable">
+                    <table class="table text-center">
+                      <thead>
+                        <tr>
+                          <th></th><th>Free</th>
+                          <th>Pro</th>
+                          <th>Enterprise</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="text-start">Public</th>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-start">Private</th>
+                          <td>-</td>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                        </tr>
+                      </tbody>
+              
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="text-start">Permissions</th>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-start">Sharing</th>
+                          <td>-</td>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-start">Unlimited members</th>
+                          <td>-</td>
+                          <td>Yes</svg></td>
+                          <td>Yes</svg></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-start">Extra security</th>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>Yes</svg></td>
+                        </tr>
+                      </tbody>
+                    </table>
+            </section>
+            <hr>
+        </main>
+        <footer>
+            Copyright &copy; Abhishek Kushwaha | All rights reserved
+        </footer>
+
+    </div>
+</body>
+
 </html>
